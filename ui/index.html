@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; connect-src 'none'; img-src 'self' data:">
+  <title>Port Manager</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main>
+    <header class="toolbar">
+      <div>
+        <h1>监听端口</h1>
+        <p id="summary">正在读取...</p>
+      </div>
+      <div class="commands">
+        <label class="search">
+          <span>筛选</span>
+          <input id="filter" type="search" placeholder="端口、进程或 PID" autocomplete="off">
+        </label>
+        <button id="refresh" type="button" title="刷新监听端口">刷新</button>
+      </div>
+    </header>
+
+    <div id="notice" role="status" aria-live="polite" hidden></div>
+
+    <section class="table-region" aria-label="本地监听端口">
+      <table>
+        <thead>
+          <tr>
+            <th>端口</th>
+            <th>进程</th>
+            <th>PID</th>
+            <th>绑定地址</th>
+            <th class="action-column">操作</th>
+          </tr>
+        </thead>
+        <tbody id="ports"></tbody>
+      </table>
+      <div id="empty" hidden>没有符合条件的监听端口</div>
+    </section>
+  </main>
+  <script src="app.js"></script>
+</body>
+</html>
