@@ -4,7 +4,7 @@
   "name": "Port Manager",
   "summary": "查看本机监听端口并终止占用端口的进程。",
   "description": "集中查看 TCP 监听端口、进程、PID 与绑定地址，并在确认后向指定端口的监听进程发送 SIGTERM。",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "category": "system",
   "author": {
     "name": "LuoChen",
@@ -15,7 +15,7 @@
   "permissions": ["process.read", "shell"],
   "networkDomains": [],
   "compatibility": {
-    "minimumHostVersion": "0.5.0",
+    "minimumHostVersion": "0.5.1",
     "minimumMacOSVersion": "13.0",
     "architectures": ["arm64", "x86_64"]
   },
