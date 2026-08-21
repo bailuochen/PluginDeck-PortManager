@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "dev.plugindeck.port-manager",
+  "name": "Port Manager",
+  "summary": "查看本机监听端口并终止占用端口的进程。",
+  "description": "集中查看 TCP 监听端口、进程、PID 与绑定地址，并在确认后向指定端口的监听进程发送 SIGTERM。",
+  "version": "1.0.0",
+  "category": "system",
+  "author": {
+    "name": "Bailuo Chen",
+    "url": "https://github.com/bailuochen"
+  },
+  "trustLevel": "community",
+  "releaseStatus": "available",
+  "permissions": ["process.read", "shell"],
+  "networkDomains": [],
+  "compatibility": {
+    "minimumHostVersion": "0.4.0",
+    "minimumMacOSVersion": "13.0",
+    "architectures": ["arm64", "x86_64"]
+  },
+  "entryPoint": {
+    "executable": "bin/port-manager",
+    "protocolVersion": 1
+  },
+  "ui": {
+    "entryPoint": "ui/index.html",
+    "bridgeVersion": 1
+  },
+  "distribution": {},
+  "repositoryURL": "https://github.com/bailuochen/PluginDeck-PortManager",
+  "icon": "network",
+  "featured": false,
+  "capabilities": [
+    "查看 TCP 监听端口",
+    "按进程或端口筛选",
+    "终止端口监听进程"
+  ],
+  "actions": [
+    {
+      "id": "list",
+      "title": "刷新监听端口",
+      "description": "读取当前用户可见的 TCP 监听端口。",
+      "icon": "arrow.clockwise",
+      "method": "ports.list",
+      "requiresConfirmation": false
+    },
+    {
+      "id": "terminate",
+      "title": "终止端口",
+      "description": "向占用指定监听端口的所有可终止进程发送 SIGTERM。",
+      "icon": "stop.circle",
+      "method": "ports.terminate",
+      "requiresConfirmation": true
+    }
+  ]
+}
