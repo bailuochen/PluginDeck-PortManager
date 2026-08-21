@@ -7,7 +7,7 @@
   "version": "1.0.0",
   "category": "system",
   "author": {
-    "name": "Bailuo Chen",
+    "name": "LuoChen",
     "url": "https://github.com/bailuochen"
   },
   "trustLevel": "community",
@@ -15,7 +15,7 @@
   "permissions": ["process.read", "shell"],
   "networkDomains": [],
   "compatibility": {
-    "minimumHostVersion": "0.4.0",
+    "minimumHostVersion": "0.5.0",
     "minimumMacOSVersion": "13.0",
     "architectures": ["arm64", "x86_64"]
   },
@@ -30,7 +30,7 @@
   "distribution": {},
   "repositoryURL": "https://github.com/bailuochen/PluginDeck-PortManager",
   "icon": "network",
-  "featured": false,
+  "featured": true,
   "capabilities": [
     "查看 TCP 监听端口",
     "按进程或端口筛选",

@@ -4,10 +4,10 @@ Port Manager is a community plugin for [PluginDeck](https://github.com/bailuoche
 
 ## Install from Git
 
-PluginDeck 0.4.0 or newer is required.
+PluginDeck 0.5.0 or newer is required.
 
-1. Open Developer Center in PluginDeck.
-2. Choose `Import from Git repository`.
+1. Open Plugin Marketplace in PluginDeck.
+2. Choose `Import Plugin > Git Repository`.
 3. Enter `https://github.com/bailuochen/PluginDeck-PortManager.git`.
 4. Review the `process.read` and `shell` permissions, then import the plugin.
 
